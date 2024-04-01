@@ -10,7 +10,7 @@ export default function jwtAuth(req, res, next) {
 
     // check if token is valid 
     try {
-        const payload = jwt.verify(token, 'QWuAfxx8Giu88kd01zIjtOABJIKY7sG7')
+        const payload = jwt.verify(token, process.env.JWT_SECRET)
         // req.userEmail = payload.email;
 
     } catch (error) {

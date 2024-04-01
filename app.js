@@ -91,6 +91,7 @@ app.post('/job-details/:id', applicantsController.addApplicant)
 app.get('/404', displayError);
 
 // create a server
+console.log(process.env.JWT_SECRET)
 app.listen(process.env.PORT);
  connectToMongoDB()
 console.log('server is listening at 5500.');
